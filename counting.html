@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/counting.css" />
+    <title>Learning Numbers 4 Kids</title>
+    <script type="text/javascript" src="js/javascript.js"></script>
+    <script type="text/javascript" src="js/counting.js"></script>
+  </head>
+  <body onload="displayWelcome();">
+    <header>
+      <h1>Learning Numbers 4 Kids</h1>
+    </header>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="counting.html">Counting</a></li>
+        <li><a href="adding">Adding</a></li>
+        <li><a href="subtracting">Subtracting</a></li>
+      </ul>
+      <ul>
+        <li><a href="changeUser">Change Name</a></li>
+        <li><a href="settings">Settings</a></li>
+      </ul>
+    </nav>
+    <h1 id="kidsname"></h1>
+    <section class="container">
+      <button class="btn my-40" onclick="startCounting();">READY, GO!!!</button>
+      <div id="countingContainer">
+        <div id="imgDiv"></div>
+        <div id="numDiv"></div>
+      </div>
+      <div id="congrats"></div>
+    </section>
+  </body>
+</html>

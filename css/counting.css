@@ -1,0 +1,35 @@
+#countingContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 100%;
+  width: 580px;
+}
+
+#imgDiv {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 300px;
+}
+#numDiv {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 130px;
+}
+
+#num {
+  font-size: 20vw;
+}
+
+#numWord {
+  font-size: 18px;
+}
+
+#congrats {
+  font-size: 40px;
+  margin: 20px 20px;
+}

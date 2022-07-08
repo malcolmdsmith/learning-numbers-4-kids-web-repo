@@ -1,0 +1,119 @@
+:root {
+  --bgColor: rgb(11, 110, 230);
+  --dark: rgb(31, 31, 138);
+  --red: #ff0000;
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  height: 100vh;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+  display: flex;
+  background-color: var(--bgColor);
+  height: 100px;
+  flex-direction: column;
+  justify-content: center;
+}
+
+h1 {
+  color: #000;
+  margin: 10px;
+}
+
+header h1 {
+  color: #fff;
+  margin: 10px;
+}
+
+nav {
+  background: var(--dark);
+  height: 30px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+ul {
+  list-style-type: none;
+}
+
+nav ul {
+  display: flex;
+}
+
+nav a {
+  padding: 5px;
+  margin: 0 5px;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+form {
+  font-size: 36px;
+}
+
+input[type="text"] {
+  border: 0;
+  border-bottom: 1px solid #b4becb;
+  width: 300px;
+  padding: 3px;
+  font-size: 36px;
+  text-align: center;
+}
+
+input:focus {
+  outline: none;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 30px;
+  cursor: pointer;
+  background: var(--red);
+  color: #fff;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  height: 60px;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.center {
+  justify-content: center;
+}
+
+#formContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.my-40 {
+  margin: 40px;
+}
+
+#kidsname {
+  text-align: center;
+}
