@@ -11,7 +11,7 @@ function getCookie(name) {
   }
 }
 
-window.addEventListener("load", function () {
+function loadIndexPage() {
   //alert("Hi");
   function processForm() {
     const kidsname = document.getElementById("kidsname").value;
@@ -36,10 +36,23 @@ window.addEventListener("load", function () {
     processForm();
     window.location = "/counting.html";
   });
-});
+}
 
 function clearElement(imgDiv) {
   while (imgDiv.firstChild) {
     imgDiv.removeChild(imgDiv.firstChild);
+  }
+}
+
+function loadCountingPage(src) {
+  let mode = getCookie("countingMode");
+  if (!mode) {
+    mode = "button";
+    setCookie("countingMode", mode);
+  }
+  if (mode === "auto") {
+    if (src !== "auto") window.location = "/counting.html";
+  } else {
+    if (src !== "button") window.location = "/countingButton.html";
   }
 }

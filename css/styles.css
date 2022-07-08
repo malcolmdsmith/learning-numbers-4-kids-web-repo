@@ -67,6 +67,10 @@ form {
   font-size: 36px;
 }
 
+#settingsForm {
+  font-size: 26px;
+}
+
 input[type="text"] {
   border: 0;
   border-bottom: 1px solid #b4becb;
@@ -113,6 +117,10 @@ section {
 
 .my-40 {
   margin: 40px;
+}
+
+.my-100 {
+  margin: 100px;
 }
 
 #kidsname {

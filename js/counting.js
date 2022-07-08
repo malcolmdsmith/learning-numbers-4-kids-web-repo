@@ -53,3 +53,28 @@ function congrats() {
   const congrats = document.querySelector("#congrats");
   congrats.innerText = "Well Done " + getCookie("kidsname") + "!!!";
 }
+
+function initializeButtonModePage() {
+  displayWelcome();
+  i = 1;
+  nextNumber();
+}
+function nextNumber() {
+  if (i === 11) {
+    i = 1;
+    const imgDiv = document.querySelector("#imgDiv");
+    clearElement(imgDiv);
+  }
+  console.info("next...");
+  const numDiv = document.querySelector("#numDiv");
+  const img = document.createElement("img");
+  img.src = "/images/dog.png";
+  imgDiv.appendChild(img);
+  numDiv.innerHTML =
+    "<div id='num'>" +
+    i +
+    "</div><div id='numWord'>" +
+    numWords[i - 1] +
+    "</div>";
+  i++;
+}

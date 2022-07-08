@@ -2,8 +2,9 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  height: 100%;
-  width: 580px;
+  align-items: center;
+  height: 428px;
+  width: 780px;
 }
 
 #imgDiv {
@@ -22,7 +23,7 @@
 }
 
 #num {
-  font-size: 20vw;
+  font-size: 14vw;
 }
 
 #numWord {
