@@ -91,6 +91,7 @@ input:focus {
   cursor: pointer;
   background: var(--red);
   color: #fff;
+  font-size: 24px;
   font-weight: bold;
   border: none;
   border-radius: 5px;
