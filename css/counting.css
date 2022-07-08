@@ -1,10 +1,19 @@
-#countingContainer {
+#countingAutoContainer {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
   height: 428px;
-  width: 780px;
+  width: 540px;
+}
+
+#countingButtonContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 428px;
+  width: 700px;
 }
 
 #imgDiv {
