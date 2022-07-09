@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/adding.css" />
+    <title>Learning Numbers 4 Kids</title>
+    <script type="text/javascript" src="js/javascript.js"></script>
+    <script type="text/javascript" src="js/adding.js"></script>
+  </head>
+  <body onload="showNextEquation();">
+    <header>
+      <div id="logo">
+        <h1 class="logo">Learning Numbers 4 Kids</h1>
+        <img src="./images/logo.png" alt="logo" />
+      </div>
+      <div>
+        <img src="./images/xander.png" alt="xander" class="boys-pics" />
+        <img src="./images/mason.png" alt="mason" class="boys-pics" />
+      </div>
+    </header>
+    <nav>
+      <ul>
+        <li><a href="index.html">HOME</a></li>
+        <li><a href="javascript:loadCountingPage()">COUNTING</a></li>
+        <li><a href="adding.html">ADDING</a></li>
+        <li><a href="subtracting.html">SUBTRACTING</a></li>
+      </ul>
+      <ul>
+        <li><a href="settings.html">SETTINGS</a></li>
+      </ul>
+    </nav>
+    <section class="container">
+      <div id="equationContainer">
+        <div class="puppynum">
+          <div id="num1Puppies"></div>
+          <div id="num1Num"></div>
+        </div>
+        <div id="plus">+</div>
+        <div class="puppynum">
+          <div id="num2Puppies"></div>
+          <div id="num2Num"></div>
+        </div>
+        <button class="btn equals" onclick="showResult();">=</button>
+        <div class="puppynum">
+          <div id="resultPuppies"></div>
+          <div id="resultNum"></div>
+        </div>
+      </div>
+      <button class="btn" id="next" onclick="showNextEquation();">NEXT</button>
+    </section>
+  </body>
+</html>
