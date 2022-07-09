@@ -15,6 +15,11 @@ sums = [
   { num1: 3, num2: 3, result: 6 },
 ];
 
+function loadAddingPage() {
+  displayWelcome("adding");
+  showNextEquation();
+}
+
 function showNextEquation() {
   const num1Puppies = document.querySelector("#num1Puppies");
   const num2Puppies = document.querySelector("#num2Puppies");

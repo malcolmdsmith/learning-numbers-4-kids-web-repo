@@ -11,6 +11,13 @@ function getCookie(name) {
   }
 }
 
+function displayWelcome(stype) {
+  const name = getCookie("kidsname");
+  const tmp = document.getElementById("kidsname");
+  console.info(stype, name);
+  tmp.textContent = "Hello " + name + " lets start " + stype + "!!";
+}
+
 function loadIndexPage() {
   //alert("Hi");
   function processForm() {

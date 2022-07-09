@@ -34,5 +34,6 @@
   display: flex;
   flex-wrap: wrap;
   width: 150px;
+  max-height: 162px;
   justify-content: center;
 }

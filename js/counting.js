@@ -1,9 +1,3 @@
-function displayWelcome() {
-  const name = getCookie("kidsname");
-  const tmp = document.getElementById("kidsname");
-  tmp.textContent = "Hello " + name + " lets start counting!!";
-}
-
 let i = 1;
 numWords = [
   "ONE",
@@ -55,7 +49,7 @@ function congrats() {
 }
 
 function initializeButtonModePage() {
-  displayWelcome();
+  displayWelcome("counting");
   i = 1;
   nextNumber();
 }
