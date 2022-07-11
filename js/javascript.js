@@ -5,37 +5,32 @@ function setCookie(name, value) {
 function getCookie(name) {
   const value = `; ${document.cookie}`;
   const parts = value.split(`; ${name}=`);
-  if (parts.length === 2) {
-    const name = parts.pop().split(";").shift();
-    return name;
-  }
+  if (parts.length === 2) return parts.pop().split(";").shift();
 }
 
 function displayWelcome(stype) {
   const name = getCookie("kidsname");
-  const tmp = document.getElementById("kidsname");
-  console.info(stype, name);
-  tmp.textContent = "Hello " + name + " lets start " + stype + "!!";
+  const result = "Hello " + name + " lets start " + stype + "!!";
+  $("#kidsname").text(result);
 }
 
 function loadIndexPage() {
-  //alert("Hi");
   function processForm() {
-    const kidsname = document.getElementById("kidsname").value;
+    const kidsname = $("#kidsname").val();
+    console.info(kidsname);
     setCookie("kidsname", kidsname);
   }
 
   const name = getCookie("kidsname");
   if (name) {
-    const kidsname = document.getElementById("kidsname");
+    const kidsname = $("#kidsname").val();
     kidsname.value = name;
   }
 
   // Access the form element...
-  const form = document.getElementById("userNameForm");
+  const form = $("form")[0];
 
   if (!form) return;
-
   // ...and take over its submit event.
   form.addEventListener("submit", function (event) {
     event.preventDefault();
@@ -62,4 +57,8 @@ function loadCountingPage(src) {
   } else {
     if (src !== "button") window.location = "/countingButton.html";
   }
+}
+
+function congrats() {
+  $("#congrats").text("Well Done " + getCookie("kidsname") + "!!!");
 }

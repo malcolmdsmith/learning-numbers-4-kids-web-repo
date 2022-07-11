@@ -6,9 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/styles.css" />
     <title>Learning Numbers 4 Kids</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script type="text/javascript" src="js/javascript.js"></script>
   </head>
-  <body onload="loadIndexPage();">
+  <body">
+      <script>
+      $(document).ready(function () {
+          console.info("loading...");
+        loadIndexPage();
+      });
+      </script>
     <header>
       <div id="logo">
         <img src="./images/logo.png" alt="logo" />
@@ -23,15 +30,15 @@
       <ul>
         <li><a href="index.html">HOME</a></li>
         <li><a href="javascript:loadCountingPage()">COUNTING</a></li>
-        <li><a href="adding.html">ADDING</a></li>
-        <li><a href="subtracting.html">SUBTRACTING</a></li>
-      </ul>
+         <li><a href="adding.html">ADDITION</a></li>
+        <li><a href="subtracting.html">SUBTRACTION</a></li>
+     </ul>
       <ul>
         <li><a href="settings.html">SETTINGS</a></li>
       </ul>
     </nav>
     <section class="container center">
-      <form id="userNameForm">
+      <form>
         <div id="formContainer">
           <div>
             Hello, what is your name?

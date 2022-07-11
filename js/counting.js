@@ -14,38 +14,32 @@ numWords = [
 
 function startCounting() {
   console.info("Start counting...");
-  const congrats = document.querySelector("#congrats");
-  congrats.innerText = "";
-  const imgDiv = document.querySelector("#imgDiv");
-  clearElement(imgDiv);
-  run(imgDiv);
+  $("#congrats").val("");
+  $("#imgDiv").empty();
+  run();
 }
 
-function run(imgDiv) {
-  const numDiv = document.querySelector("#numDiv");
+function run() {
   const img = document.createElement("img");
   img.src = "/images/dog.png";
-  imgDiv.appendChild(img);
-  numDiv.innerHTML =
+  $("#imgDiv").append(img);
+  $("#numDiv").empty();
+  $("#numDiv").append(
     "<div id='num'>" +
-    i +
-    "</div><div id='numWord'>" +
-    numWords[i - 1] +
-    "</div>";
+      i +
+      "</div><div id='numWord'>" +
+      numWords[i - 1] +
+      "</div>"
+  );
 
   setTimeout(() => {
     i++;
-    if (i <= 10) run(imgDiv);
+    if (i <= 10) run();
     else {
       i = 1;
       congrats();
     }
   }, 1000);
-}
-
-function congrats() {
-  const congrats = document.querySelector("#congrats");
-  congrats.innerText = "Well Done " + getCookie("kidsname") + "!!!";
 }
 
 function initializeButtonModePage() {
@@ -54,21 +48,24 @@ function initializeButtonModePage() {
   nextNumber();
 }
 function nextNumber() {
+  if (i === 10) congrats();
+
   if (i === 11) {
     i = 1;
-    const imgDiv = document.querySelector("#imgDiv");
-    clearElement(imgDiv);
+    $("#imgDiv").empty();
+    $("#congrats").empty();
   }
-  console.info("next...");
-  const numDiv = document.querySelector("#numDiv");
+
   const img = document.createElement("img");
   img.src = "/images/dog.png";
-  imgDiv.appendChild(img);
-  numDiv.innerHTML =
+  $("#imgDiv").append(img);
+  $("#numDiv").empty();
+  $("#numDiv").append(
     "<div id='num'>" +
-    i +
-    "</div><div id='numWord'>" +
-    numWords[i - 1] +
-    "</div>";
+      i +
+      "</div><div id='numWord'>" +
+      numWords[i - 1] +
+      "</div>"
+  );
   i++;
 }

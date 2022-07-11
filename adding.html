@@ -7,10 +7,17 @@
     <link rel="stylesheet" href="css/styles.css" />
     <link rel="stylesheet" href="css/adding.css" />
     <title>Learning Numbers 4 Kids</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script type="text/javascript" src="js/javascript.js"></script>
     <script type="text/javascript" src="js/adding.js"></script>
   </head>
-  <body onload="loadAddingPage();">
+  <body>
+    <script>
+      $(document).ready(function () {
+        console.info("loading...");
+        loadAddingPage("sums");
+      });
+    </script>
     <header>
       <div id="logo">
         <img src="./images/logo.png" alt="logo" />
@@ -25,8 +32,8 @@
       <ul>
         <li><a href="index.html">HOME</a></li>
         <li><a href="javascript:loadCountingPage()">COUNTING</a></li>
-        <li><a href="adding.html">ADDING</a></li>
-        <li><a href="subtracting.html">SUBTRACTING</a></li>
+        <li><a href="adding.html">ADDITION</a></li>
+        <li><a href="subtracting.html">SUBTRACTION</a></li>
       </ul>
       <ul>
         <li><a href="settings.html">SETTINGS</a></li>
@@ -35,22 +42,25 @@
     <h1 id="kidsname"></h1>
     <section class="container">
       <div id="equationContainer">
-        <div class="puppynum">
-          <div id="num1Puppies"></div>
-          <div id="num1Num"></div>
+        <div id="num1" class="puppynum">
+          <div></div>
+          <div></div>
         </div>
         <div id="plus">+</div>
-        <div class="puppynum">
-          <div id="num2Puppies"></div>
-          <div id="num2Num"></div>
+        <div id="num2" class="puppynum">
+          <div></div>
+          <div></div>
         </div>
-        <button class="btn equals" onclick="showResult();">=</button>
-        <div class="puppynum">
-          <div id="resultPuppies"></div>
-          <div id="resultNum"></div>
+        <button class="btn equals" onclick="showResult('sums');">=</button>
+        <div id="answer" class="puppynum">
+          <div></div>
+          <div></div>
         </div>
       </div>
-      <button class="btn" id="next" onclick="showNextEquation();">NEXT</button>
+      <button class="btn" id="next" onclick="showNextEquation('sums');">
+        NEXT
+      </button>
+      <h1 id="congrats"></h1>
     </section>
   </body>
 </html>

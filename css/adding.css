@@ -19,18 +19,14 @@
   font-size: 4vh;
 }
 
-#resultNum {
-  font-size: 4vh;
-}
-
 #next {
   margin-top: 130px;
   width: 300px;
 }
 
-#num1Puppies,
-#num2Puppies,
-#resultPuppies {
+#num1 div:first-child,
+#num2 div:first-child,
+#answer div:first-child {
   display: flex;
   flex-wrap: wrap;
   width: 150px;

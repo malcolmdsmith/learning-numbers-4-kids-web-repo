@@ -11,7 +11,13 @@
     <script type="text/javascript" src="js/javascript.js"></script>
     <script type="text/javascript" src="js/counting.js"></script>
   </head>
-  <body onload="displayWelcome('counting');">
+  <body>
+    <script>
+      $(document).ready(function () {
+        console.info("loading...");
+        displayWelcome("counting");
+      });
+    </script>
     <header>
       <div id="logo">
         <img src="./images/logo.png" alt="logo" />
@@ -26,8 +32,8 @@
       <ul>
         <li><a href="index.html">HOME</a></li>
         <li><a href="javascript:loadCountingPage()">COUNTING</a></li>
-        <li><a href="adding.html">ADDING</a></li>
-        <li><a href="subtracting.html">SUBTRACTING</a></li>
+        <li><a href="adding.html">ADDITION</a></li>
+        <li><a href="subtracting.html">SUBTRACTION</a></li>
       </ul>
       <ul>
         <li><a href="settings.html">SETTINGS</a></li>
@@ -40,7 +46,7 @@
         <div id="imgDiv"></div>
         <div id="numDiv"></div>
       </div>
-      <div id="congrats"></div>
+      <h1 id="congrats"></h1>
     </section>
   </body>
 </html>
