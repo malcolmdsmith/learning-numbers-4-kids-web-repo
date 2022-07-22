@@ -150,6 +150,11 @@ section {
   margin-top: 60px;
 }
 
+#congrats {
+  font-size: 40px;
+  margin: 20px 20px;
+}
+
 .boys-pics {
   height: 50px;
   width: 50px;

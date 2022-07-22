@@ -15,7 +15,7 @@ function startAnimation() {
     sprite: "sprite1",
     x: 0,
     y: 0,
-    amplitude: 35,
+    amplitude: 45,
     frequency: 40,
     height: 0,
   });
@@ -32,11 +32,12 @@ function startAnimation() {
 
 function goAgain() {
   for (i = 0; i < data.length; i++) {
-    h = Math.floor(Math.random() * heightMax);
+    h = Math.floor(Math.random() * (heightMax - 50));
+    console.info("h...", h);
     data[i].height = h;
     data[i].x = 0;
   }
-  console.info(data);
+  // console.info(data);
   loop();
 }
 

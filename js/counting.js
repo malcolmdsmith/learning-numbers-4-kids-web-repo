@@ -1,4 +1,5 @@
-let i = 1;
+let number = 1;
+
 numWords = [
   "ONE",
   "TWO",
@@ -13,7 +14,7 @@ numWords = [
 ];
 
 function startCounting() {
-  console.info("Start counting...");
+  console.info("Start counting...", number);
   $("#congrats").val("");
   $("#imgDiv").empty();
   run();
@@ -26,32 +27,35 @@ function run() {
   $("#numDiv").empty();
   $("#numDiv").append(
     "<div id='num'>" +
-      i +
+      number +
       "</div><div id='numWord'>" +
-      numWords[i - 1] +
+      numWords[number - 1] +
       "</div>"
   );
 
   setTimeout(() => {
-    i++;
-    if (i <= 10) run();
-    else {
-      i = 1;
+    number++;
+    if (number <= 10) {
+      run();
+    } else {
+      number = 1;
       congrats();
     }
   }, 1000);
 }
 
 function initializeButtonModePage() {
+  startAnimation();
   displayWelcome("counting");
-  i = 1;
+  number = 1;
   nextNumber();
 }
-function nextNumber() {
-  if (i === 10) congrats();
 
-  if (i === 11) {
-    i = 1;
+function nextNumber() {
+  if (number === 10) congrats();
+
+  if (number === 11) {
+    number = 1;
     $("#imgDiv").empty();
     $("#congrats").empty();
   }
@@ -62,10 +66,10 @@ function nextNumber() {
   $("#numDiv").empty();
   $("#numDiv").append(
     "<div id='num'>" +
-      i +
+      number +
       "</div><div id='numWord'>" +
-      numWords[i - 1] +
+      numWords[number - 1] +
       "</div>"
   );
-  i++;
+  number++;
 }

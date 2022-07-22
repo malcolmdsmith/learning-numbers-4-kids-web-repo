@@ -1,4 +1,4 @@
-let i = 0;
+let eqNum = 0;
 let prev = -1;
 
 sums = [
@@ -30,28 +30,34 @@ minuses = [
 ];
 
 function loadAddingPage(type) {
-  i = 0;
-  displayWelcome("subtracting");
-  if (type === "sums") $("#plus").text("+");
-  else $("#plus").text("-");
+  eqNum = 0;
+  if (type === "sums") {
+    displayWelcome("adding");
+    $("#plus").text("+");
+  } else {
+    displayWelcome("subtracting");
+    $("#plus").text("-");
+  }
   showNextEquation(type);
 }
 
 function showNextEquation(type) {
+  if (eqNum) $("#congrats").text("");
+
   let arr = [];
   if (type === "sums") arr = sums;
   else arr = minuses;
 
-  $("#num1 div:first").empty();
-  $("#num2 div:first").empty();
-  $("#answer div:first").empty();
-  $("#answer div:last").text("?");
+  $("#num1 div:last").empty();
+  $("#num2 div:last").empty();
+  $("#answer div:last").empty();
+  $("#answer div:first").text("?");
 
-  addPuppies($("#num1 div:first")[0], arr[i].num1);
-  addPuppies($("#num2 div:first")[0], arr[i].num2);
+  addPuppies($("#num1 div:last")[0], arr[eqNum].num1);
+  addPuppies($("#num2 div:last")[0], arr[eqNum].num2);
 
-  addNumber($("#num1 div:last")[0], arr[i].num1);
-  addNumber($("#num2 div:last")[0], arr[i].num2);
+  addNumber($("#num1 div:first")[0], arr[eqNum].num1);
+  addNumber($("#num2 div:first")[0], arr[eqNum].num2);
 
   prev = -1;
 }
@@ -69,17 +75,19 @@ function addNumber(div, num) {
 }
 
 function showResult(type) {
-  if (prev === i) return;
+  if (prev === eqNum) return;
 
   let arr = [];
   if (type === "sums") arr = sums;
   else arr = minuses;
 
-  addPuppies($("#answer div:first")[0], arr[i].result);
-  addNumber($("#answer div:last")[0], arr[i].result);
-  if (i === sums.length - 1) {
-    i = 0;
+  addPuppies($("#answer div:last")[0], arr[eqNum].result);
+  addNumber($("#answer div:first")[0], arr[eqNum].result);
+  if (eqNum === sums.length - 1) {
+    eqNum = 0;
     congrats();
-  } else i++;
-  prev = i;
+  } else {
+    eqNum++;
+  }
+  prev = eqNum;
 }
