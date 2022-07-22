@@ -11,7 +11,7 @@ function getCookie(name) {
 function displayWelcome(stype) {
   const name = getCookie("kidsname");
   const result = "Hello " + name + " lets start " + stype + "!!";
-  $("#kidsname").text(result);
+  $("#welcome").text(result);
 }
 
 function loadIndexPage() {

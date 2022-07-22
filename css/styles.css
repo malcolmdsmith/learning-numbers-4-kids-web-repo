@@ -148,6 +148,12 @@ section {
 #kidsname {
   text-align: center;
   margin-top: 60px;
+  background-color: lightsalmon;
+}
+
+#welcome {
+  text-align: center;
+  margin-top: 60px;
 }
 
 #congrats {

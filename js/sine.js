@@ -33,7 +33,6 @@ function startAnimation() {
 function goAgain() {
   for (i = 0; i < data.length; i++) {
     h = Math.floor(Math.random() * (heightMax - 50));
-    console.info("h...", h);
     data[i].height = h;
     data[i].x = 0;
   }
