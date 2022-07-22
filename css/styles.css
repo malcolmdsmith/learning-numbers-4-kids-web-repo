@@ -23,6 +23,7 @@ header {
   height: 100px;
   flex-direction: row;
   justify-content: space-between;
+  align-items: center;
   padding: 5px;
 }
 
@@ -144,6 +145,39 @@ section {
 }
 
 .boys-pics {
-  height: 100px;
-  width: 100px;
+  height: 50px;
+  width: 50px;
+}
+
+.boys-pics-static {
+  height: 70px;
+  width: 70px;
+}
+
+#sprite1 {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  height: 70px;
+  animation: cycle 1s linear infinite;
+}
+
+#sprite2 {
+  position: absolute;
+  left: 0px;
+  top: 50px;
+  height: 70px;
+  animation: cycle 1s linear infinite;
+}
+
+@keyframes cycle {
+  0% {
+    transform: scaleX(1);
+  }
+  50% {
+    transform: scaleX(1.3);
+  }
+  100% {
+    transform: scaleX(1);
+  }
 }

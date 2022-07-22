@@ -8,12 +8,14 @@
     <title>Learning Numbers 4 Kids</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script type="text/javascript" src="js/javascript.js"></script>
+    <script type="text/javascript" src="js/sine.js"></script>
   </head>
   <body">
       <script>
       $(document).ready(function () {
           console.info("loading...");
         loadIndexPage();
+        start();
       });
       </script>
     <header>
@@ -22,8 +24,12 @@
         <h1 class="logo">Learning Numbers 4 Kids</h1>
       </div>
       <div>
-        <img src="./images/xander.png" alt="xander" class="boys-pics" />
-        <img src="./images/mason.png" alt="mason" class="boys-pics" />
+        <img src="./images/xander.png" alt="xander" class="boys-pics" id="sprite1" />
+        <img src="./images/mason.png" alt="mason" class="boys-pics" id="sprite2" />
+      </div>
+      <div>
+        <img src="./images/xander.png" alt="xander" class="boys-pics-static"  />
+        <img src="./images/mason.png" alt="mason" class="boys-pics-static" />
       </div>
     </header>
     <nav>
