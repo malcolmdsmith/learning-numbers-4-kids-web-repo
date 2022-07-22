@@ -1,22 +1,21 @@
 let x = 0;
-let amplitude = 40;
+let amplitude = 25;
 let frequency = 30;
 let heightMax = 0;
 let width = 0;
 let data = [];
 
-function start() {
+function startAnimation() {
   console.info("Go...");
   width =
     document.querySelector("#sprite1").parentNode.parentElement.clientWidth;
   heightMax =
     document.querySelector("#sprite1").parentNode.parentElement.clientHeight;
-
   data.push({
     sprite: "sprite1",
     x: 0,
     y: 0,
-    amplitude: 40,
+    amplitude: 35,
     frequency: 40,
     height: 0,
   });
@@ -24,7 +23,7 @@ function start() {
     sprite: "sprite2",
     x: 0,
     y: 50,
-    amplitude: 40,
+    amplitude: 25,
     frequency: 30,
     height: 0,
   });
@@ -33,7 +32,7 @@ function start() {
 
 function goAgain() {
   for (i = 0; i < data.length; i++) {
-    h = Math.floor(Math.random() * heightMax + 50);
+    h = Math.floor(Math.random() * heightMax);
     data[i].height = h;
     data[i].x = 0;
   }

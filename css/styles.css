@@ -20,7 +20,7 @@ body {
 header {
   display: flex;
   background-color: #fff;
-  height: 100px;
+  height: 130px;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
@@ -37,16 +37,21 @@ header h1 {
   margin: 10px;
 }
 
-#logo {
+#title {
   display: flex;
   flex-direction: row;
   align-items: center;
   margin-left: 20px;
 }
 
+#logo {
+  animation: cycle 1.5s linear infinite;
+  margin-right: 10px;
+}
+
 nav {
   background: var(--dark);
-  height: 30px;
+  height: 40px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -129,7 +134,7 @@ section {
 #formContainer {
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
+  align-items: center;
 }
 
 .my-40 {
@@ -142,6 +147,7 @@ section {
 
 #kidsname {
   text-align: center;
+  margin-top: 60px;
 }
 
 .boys-pics {
@@ -150,8 +156,8 @@ section {
 }
 
 .boys-pics-static {
-  height: 70px;
-  width: 70px;
+  height: 90px;
+  width: 90px;
 }
 
 #sprite1 {
@@ -159,6 +165,7 @@ section {
   left: 0px;
   top: 0px;
   height: 70px;
+  width: 70px;
   animation: cycle 1s linear infinite;
 }
 
@@ -167,17 +174,43 @@ section {
   left: 0px;
   top: 50px;
   height: 70px;
+  width: 70px;
   animation: cycle 1s linear infinite;
 }
 
 @keyframes cycle {
   0% {
-    transform: scaleX(1);
+    transform: scale(1);
   }
   50% {
-    transform: scaleX(1.3);
+    transform: scale(1.3);
   }
   100% {
-    transform: scaleX(1);
+    transform: scale(1);
   }
+}
+
+#wrapper {
+  position: relative;
+}
+
+/* Waves */
+.custom-shape-divider-top-1658519287 {
+  position: absolute;
+  top: 40;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.custom-shape-divider-top-1658519287 svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 59px;
+}
+
+.custom-shape-divider-top-1658519287 .shape-fill {
+  fill: #1f1f8a;
 }
