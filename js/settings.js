@@ -12,11 +12,21 @@ function settingsOnLoad() {
       'input[name="countingMode"]:checked'
     ).value;
     setCookie("countingMode", countingMode);
-    loadCountingPage("settings");
+
+    const fromMulti = document.querySelector("#fromMulti").value;
+    setCookie("fromMulti", fromMulti);
+    const toMulti = document.querySelector("#toMulti").value;
+    setCookie("toMulti", toMulti);
+    window.location = "/";
+    //loadCountingPage("settings");
   });
 }
 
 function updateSettingsFromCookies() {
   const mode = getCookie("countingMode");
   $("#" + mode + "Mode").prop("checked", true);
+  const fromMulti = getCookie("fromMulti");
+  $("#fromMulti").val(fromMulti);
+  const toMulti = getCookie("toMulti");
+  $("#toMulti").val(toMulti);
 }

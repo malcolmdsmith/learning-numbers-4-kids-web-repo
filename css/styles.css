@@ -95,6 +95,16 @@ input[type="text"] {
   text-align: center;
 }
 
+input[type="number"] {
+  border: 0;
+  border-bottom: 1px solid #b4becb;
+  width: 70px;
+  padding: 3px;
+  font-size: 36px;
+  text-align: center;
+  background-color: lightskyblue;
+}
+
 input:focus {
   outline: none;
 }
