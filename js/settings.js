@@ -14,9 +14,9 @@ function settingsOnLoad() {
     setCookie("countingMode", countingMode);
 
     const fromMulti = document.querySelector("#fromMulti").value;
-    setCookie("fromMulti", fromMulti);
+    if (fromMulti) setCookie("fromMulti", fromMulti);
     const toMulti = document.querySelector("#toMulti").value;
-    setCookie("toMulti", toMulti);
+    if (toMulti) setCookie("toMulti", toMulti);
     window.location = "/";
     //loadCountingPage("settings");
   });
