@@ -3,7 +3,7 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  height: 428px;
+  height: 328px;
   width: 540px;
 }
 
@@ -12,7 +12,7 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  height: 428px;
+  height: 328px;
   width: 700px;
 }
 
@@ -21,7 +21,7 @@
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  width: 300px;
+  width: 210px;
 }
 #numDiv {
   display: flex;
@@ -32,7 +32,7 @@
 }
 
 #num {
-  font-size: 18vw;
+  font-size: 14vw;
 }
 
 #numWord {

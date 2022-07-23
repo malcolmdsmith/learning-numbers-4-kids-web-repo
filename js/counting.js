@@ -23,6 +23,7 @@ function startCounting() {
 function run() {
   const img = document.createElement("img");
   img.src = "/images/dog.png";
+  img.classList.add("doggy");
   $("#imgDiv").append(img);
   $("#numDiv").empty();
   $("#numDiv").append(
@@ -62,6 +63,7 @@ function nextNumber() {
 
   const img = document.createElement("img");
   img.src = "/images/dog.png";
+  img.classList.add("doggy");
   $("#imgDiv").append(img);
   $("#numDiv").empty();
   $("#numDiv").append(
