@@ -229,3 +229,23 @@ section {
 .custom-shape-divider-top-1658519287 .shape-fill {
   fill: #1f1f8a;
 }
+
+.custom-shape-divider-bottom-1658547868 {
+  position: absolute;
+  bottom: 40px;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.custom-shape-divider-bottom-1658547868 svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 22px;
+}
+
+.custom-shape-divider-bottom-1658547868 .shape-fill {
+  fill: #1f1f8a;
+}
