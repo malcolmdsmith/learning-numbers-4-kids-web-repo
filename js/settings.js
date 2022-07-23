@@ -14,11 +14,9 @@ function settingsOnLoad() {
     setCookie("countingMode", countingMode);
 
     const fromMulti = document.querySelector("#fromMulti").value;
-    if (fromMulti !== "") {
-      setCookie("fromMulti", fromMulti);
-      const toMulti = document.querySelector("#toMulti").value;
-      setCookie("toMulti", toMulti);
-    }
+    setCookie("fromMulti", fromMulti);
+    const toMulti = document.querySelector("#toMulti").value;
+    setCookie("toMulti", toMulti);
     window.location = "/";
     //loadCountingPage("settings");
   });
@@ -28,7 +26,7 @@ function updateSettingsFromCookies() {
   const mode = getCookie("countingMode");
   $("#" + mode + "Mode").prop("checked", true);
   const fromMulti = getCookie("fromMulti");
-  $("#fromMulti").val(fromMulti);
+  if (fromMulti) $("#fromMulti").val(fromMulti);
   const toMulti = getCookie("toMulti");
-  $("#toMulti").val(toMulti);
+  if (toMulti) $("#toMulti").val(toMulti);
 }
