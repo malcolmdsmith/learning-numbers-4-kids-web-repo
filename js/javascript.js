@@ -22,9 +22,9 @@ function loadIndexPage() {
   }
 
   const name = getCookie("kidsname");
+  console.info(name);
   if (name) {
-    const kidsname = $("#kidsname").val();
-    kidsname.value = name;
+    $("#kidsname").val(name);
   }
 
   // Access the form element...
