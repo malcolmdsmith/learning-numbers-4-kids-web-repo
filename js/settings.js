@@ -14,9 +14,11 @@ function settingsOnLoad() {
     setCookie("countingMode", countingMode);
 
     const fromMulti = document.querySelector("#fromMulti").value;
-    if (fromMulti) setCookie("fromMulti", fromMulti);
-    const toMulti = document.querySelector("#toMulti").value;
-    if (toMulti) setCookie("toMulti", toMulti);
+    if (fromMulti !== "") {
+      setCookie("fromMulti", fromMulti);
+      const toMulti = document.querySelector("#toMulti").value;
+      setCookie("toMulti", toMulti);
+    }
     window.location = "/";
     //loadCountingPage("settings");
   });
