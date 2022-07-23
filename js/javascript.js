@@ -9,8 +9,9 @@ function getCookie(name) {
 }
 
 function displayWelcome(stype) {
-  const name = getCookie("kidsname");
-  const result = "Hello " + name + " lets start " + stype + "!!";
+  let name = getCookie("kidsname");
+  if (!name) name = "Joe";
+  const result = "Hello " + name + ", lets start " + stype + "!!";
   $("#welcome").text(result);
 }
 
@@ -60,5 +61,7 @@ function loadCountingPage(src) {
 }
 
 function congrats() {
-  $("#congrats").text("Well Done " + getCookie("kidsname") + "!!!");
+  let name = getCookie("kidsname");
+  if (!name) name = "Joe";
+  $("#congrats").text("Well Done " + name + "!!!");
 }
