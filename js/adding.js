@@ -42,7 +42,7 @@ function loadAddingPage(type) {
 }
 
 function showNextEquation(type) {
-  if (eqNum) $("#congrats").text("");
+  if (eqNum === 0) $("#congrats").text("");
 
   let arr = [];
   if (type === "sums") arr = sums;
