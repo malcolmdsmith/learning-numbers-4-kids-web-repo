@@ -4,10 +4,16 @@ let fromMulti = 0;
 let toMulti = 0;
 
 function loadMultiplicationPage() {
-  fromMulti = parseInt(getCookie("fromMulti"));
+  let value = getCookie("fromMulti");
+  if (value === "") {
+    setCookie("fromMulti", 1);
+    setCookie("toMulti", 6);
+  }
+  fromMulti = parseInt(value === "" ? 1 : value);
   multi1 = fromMulti;
   multi2 = fromMulti;
-  toMulti = parseInt(getCookie("toMulti"));
+  value = getCookie("toMulti");
+  toMulti = parseInt(value === "" ? 6 : value);
   console.info(fromMulti, toMulti);
   displayWelcome("multiplying");
   showNumbers();
