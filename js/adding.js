@@ -51,7 +51,8 @@ function showNextEquation(type) {
   $("#num1 div:last").empty();
   $("#num2 div:last").empty();
   $("#answer div:last").empty();
-  $("#answer div:first").text("?");
+  $("#answer div:first").empty();
+  $("#answer div:last").text("?");
 
   addPuppies($("#num1 div:last")[0], arr[eqNum].num1);
   addPuppies($("#num2 div:last")[0], arr[eqNum].num2);
@@ -66,12 +67,21 @@ function addPuppies(div, num) {
   for (let j = 1; j <= num; j++) {
     const img = document.createElement("img");
     img.src = "/images/dog50x54.png";
+    img.width = 50;
+    img.height = 54;
     div.append(img);
   }
 }
 
 function addNumber(div, num) {
-  div.innerText = num;
+  const html =
+    "<div id='numWord'>" +
+    numWords[num - 1] +
+    "</div><div id='eqNum'>" +
+    num +
+    "</div>";
+  console.info(html);
+  div.innerHTML = html;
 }
 
 function showResult(type) {
@@ -80,6 +90,9 @@ function showResult(type) {
   let arr = [];
   if (type === "sums") arr = sums;
   else arr = minuses;
+
+  $("#answer div:last").text("");
+  $("#answer div:first").text("");
 
   addPuppies($("#answer div:last")[0], arr[eqNum].result);
   addNumber($("#answer div:first")[0], arr[eqNum].result);

@@ -1,18 +1,5 @@
 let number = 1;
 
-numWords = [
-  "ONE",
-  "TWO",
-  "THREE",
-  "FOUR",
-  "FIVE",
-  "SIX",
-  "SEVEN",
-  "EIGHT",
-  "NINE",
-  "TEN",
-];
-
 function startCounting() {
   console.info("Start counting...", number);
   $("#congrats").val("");

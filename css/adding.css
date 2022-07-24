@@ -5,6 +5,8 @@
   justify-content: space-between;
   align-items: center;
   margin-top: 100px;
+  background-color: limegreen;
+  border-radius: 5px;
 }
 
 #plus {
@@ -17,25 +19,33 @@
   align-items: center;
   justify-content: center;
   font-size: 4vh;
+  padding: 10px;
 }
 
 #next {
-  margin-top: 130px;
+  margin-top: 60px;
   width: 300px;
 }
 
-#num1 div:last-child,
-#num2 div:last-child,
-#answer div:last-child {
+#eqNum {
+  font-size: 6vh;
+  margin-bottom: 20px;
+}
+
+#num1 > div:last-child,
+#num2 > div:last-child,
+#answer > div:last-child {
   display: flex;
   flex-wrap: wrap;
   width: 150px;
-  max-height: 162px;
+  height: 162px;
   justify-content: center;
+  align-items: center;
+  font-size: 7vh;
 }
 
-#num1 div:first-child,
-#num2 div:first-child,
-#answer div:first-child {
-  margin-bottom: 20px;
+#num1 > div:first-child,
+#num2 > div:first-child,
+#answer > div:first-child {
+  margin-bottom: 0px;
 }

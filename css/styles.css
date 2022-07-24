@@ -146,6 +146,12 @@ input:focus {
   margin-top: 100px;
 }
 
+#numWord {
+  font-size: 18px;
+  text-align: center;
+  height: 25px;
+}
+
 .my-40 {
   margin: 40px;
 }

@@ -37,7 +37,9 @@ function loadIndexPage() {
     event.preventDefault();
 
     processForm();
-    window.location = "/counting.html";
+    const mode = getCookie("countingMode");
+    window.location =
+      mode === "auto" ? "/counting.html" : "/countingButton.html";
   });
 }
 

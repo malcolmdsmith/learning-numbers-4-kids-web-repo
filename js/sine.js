@@ -8,7 +8,8 @@ let data = [];
 function startAnimation() {
   console.info("Go...");
   width =
-    document.querySelector("#sprite1").parentNode.parentElement.clientWidth;
+    document.querySelector("#sprite1").parentNode.parentElement.clientWidth -
+    50;
   heightMax =
     document.querySelector("#sprite1").parentNode.parentElement.clientHeight;
   data.push({
@@ -44,9 +45,6 @@ function goAgain() {
       data[i].direction = 1;
     }
   }
-  //data[0].x = width;
-  //data[1].x = 0;
-  // console.info(data);
   loop();
 }
 
@@ -69,7 +67,6 @@ function move(spriteData) {
   let y =
     spriteData.height +
     spriteData.amplitude * Math.sin(spriteData.x / spriteData.frequency);
-  //console.info("x:y", spriteData.x, y);
   let sprite = document.getElementById(spriteData.sprite);
   sprite.style.left = spriteData.x + "px";
   sprite.style.top = y + "px";

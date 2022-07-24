@@ -4,7 +4,9 @@
   justify-content: space-between;
   align-items: center;
   height: 328px;
-  width: 540px;
+  width: 420px;
+  background-color: limegreen;
+  padding: 0px 40px;
 }
 
 #countingButtonContainer {
@@ -13,7 +15,9 @@
   justify-content: space-between;
   align-items: center;
   height: 328px;
-  width: 700px;
+  width: 660px;
+  padding: 0px 20px;
+  background-color: limegreen;
 }
 
 #imgDiv {
@@ -33,8 +37,4 @@
 
 #num {
   font-size: 14vw;
-}
-
-#numWord {
-  font-size: 18px;
 }
