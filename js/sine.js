@@ -13,8 +13,9 @@ function startAnimation() {
     document.querySelector("#sprite1").parentNode.parentElement.clientHeight;
   data.push({
     sprite: "sprite1",
-    x: 0,
+    x: width,
     y: 0,
+    direction: -1,
     amplitude: 45,
     frequency: 40,
     height: 0,
@@ -23,6 +24,7 @@ function startAnimation() {
     sprite: "sprite2",
     x: 0,
     y: 50,
+    direction: 1,
     amplitude: 25,
     frequency: 30,
     height: 0,
@@ -34,8 +36,16 @@ function goAgain() {
   for (i = 0; i < data.length; i++) {
     h = Math.floor(Math.random() * (heightMax - 50));
     data[i].height = h;
-    data[i].x = 0;
+    if (data[i].direction === 1) {
+      data[i].x = width;
+      data[i].direction = -1;
+    } else {
+      data[i].x = 0;
+      data[i].direction = 1;
+    }
   }
+  //data[0].x = width;
+  //data[1].x = 0;
   // console.info(data);
   loop();
 }
@@ -43,9 +53,9 @@ function goAgain() {
 function loop() {
   for (i = 0; i < data.length; i++) {
     move(data[i]);
-    data[i].x = data[i].x + 1;
+    data[i].x = data[i].x + 1 * data[i].direction;
   }
-  let x = data[0].x;
+  let x = getX();
   setTimeout(() => {
     if (x < width) {
       loop();
@@ -63,4 +73,9 @@ function move(spriteData) {
   let sprite = document.getElementById(spriteData.sprite);
   sprite.style.left = spriteData.x + "px";
   sprite.style.top = y + "px";
+}
+
+function getX() {
+  if (data[0].direction === 1) return data[0].x;
+  return data[1].x;
 }
