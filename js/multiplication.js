@@ -5,6 +5,9 @@ let toMulti = 0;
 
 function loadMultiplicationPage() {
   let value = getCookie("fromMulti");
+  $("#multi1").text(value);
+  return;
+
   if (value === "") {
     setCookie("fromMulti", 1);
     setCookie("toMulti", 6);
