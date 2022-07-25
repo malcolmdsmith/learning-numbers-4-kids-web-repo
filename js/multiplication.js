@@ -5,18 +5,15 @@ let toMulti = 0;
 
 function loadMultiplicationPage() {
   let value = getCookie("fromMulti");
-  $("#multi1").text(value);
-  return;
-
-  if (value === "") {
+  if (value === undefined) {
     setCookie("fromMulti", 1);
     setCookie("toMulti", 6);
   }
-  fromMulti = parseInt(value === "" ? 1 : value);
+  fromMulti = parseInt(value === undefined ? 1 : value);
   multi1 = fromMulti;
   multi2 = fromMulti;
   value = getCookie("toMulti");
-  toMulti = parseInt(value === "" ? 6 : value);
+  toMulti = parseInt(value === undefined ? 6 : value);
   console.info(fromMulti, toMulti);
   displayWelcome("multiplying");
   showNumbers();

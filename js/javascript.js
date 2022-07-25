@@ -9,8 +9,7 @@ function getCookie(name) {
 }
 
 function deleteCookie(name) {
-  //document.cookie = name + "=; Path=/; Expires=Thu, 01 Jan 1970 00:00:01 GMT;";
-  document.cookie = name + "=; Expires=Thu, 01 Jan 1970 00:00:01 GMT;";
+  document.cookie = name + "=; Path=/; Expires=Thu, 01 Jan 1970 00:00:01 GMT;";
 }
 
 function displayWelcome(stype) {
@@ -21,8 +20,8 @@ function displayWelcome(stype) {
 }
 
 function loadIndexPage() {
-  deleteCookie("fromMulti");
-  deleteCookie("toMulti");
+  //  deleteCookie("fromMulti");
+  //  deleteCookie("toMulti");
   function processForm() {
     const kidsname = $("#kidsname").val();
     console.info(kidsname);

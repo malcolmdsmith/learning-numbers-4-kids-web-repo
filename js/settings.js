@@ -18,7 +18,6 @@ function settingsOnLoad() {
     const toMulti = document.querySelector("#toMulti").value;
     setCookie("toMulti", toMulti);
     window.location = "/";
-    //loadCountingPage("settings");
   });
 }
 
