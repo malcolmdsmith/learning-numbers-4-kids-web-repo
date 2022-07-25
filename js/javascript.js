@@ -1,11 +1,16 @@
 function setCookie(name, value) {
-  document.cookie = name + "=" + escape(value); // + "; path=/; expires=" + expiry.toGMTString();
+  document.cookie = name + "=" + escape(value) + "; Path=/;"; // expires=" + expiry.toGMTString();
 }
 
 function getCookie(name) {
   const value = `; ${document.cookie}`;
   const parts = value.split(`; ${name}=`);
   if (parts.length === 2) return parts.pop().split(";").shift();
+}
+
+function deleteCookie(name) {
+  //document.cookie = name + "=; Path=/; Expires=Thu, 01 Jan 1970 00:00:01 GMT;";
+  document.cookie = name + "=; Expires=Thu, 01 Jan 1970 00:00:01 GMT;";
 }
 
 function displayWelcome(stype) {
@@ -16,6 +21,8 @@ function displayWelcome(stype) {
 }
 
 function loadIndexPage() {
+  deleteCookie("fromMulti");
+  deleteCookie("toMulti");
   function processForm() {
     const kidsname = $("#kidsname").val();
     console.info(kidsname);
