@@ -198,6 +198,7 @@ input:focus {
   height: 70px;
   width: 70px;
   animation: cycle 1s linear infinite;
+  animation: wobble 3s ease-in-out infinite alternate;
 }
 
 #sprite2 {
@@ -206,7 +207,7 @@ input:focus {
   top: 50px;
   height: 70px;
   width: 70px;
-  animation: cycle 1s linear infinite;
+  animation: cycle 1s linear infinite, wobble 3s ease-in-out infinite alternate;
 }
 
 @keyframes cycle {
@@ -221,6 +222,14 @@ input:focus {
   }
 }
 
+@keyframes wobble {
+  0% {
+    transform: rotate(-0.15turn);
+  }
+  100% {
+    transform: rotate(0.15turn);
+  }
+}
 #wrapper {
   position: relative;
 }
