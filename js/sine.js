@@ -9,7 +9,7 @@ function startAnimation() {
   console.info("Go...");
   width =
     document.querySelector("#sprite1").parentNode.parentElement.clientWidth -
-    50;
+    60;
   heightMax =
     document.querySelector("#sprite1").parentNode.parentElement.clientHeight;
   data.push({
